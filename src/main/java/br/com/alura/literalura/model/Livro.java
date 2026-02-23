@@ -7,7 +7,7 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Livro {
     @Id
-    private Long idApi;
+    private Long id;
 
     private String titulo;
     private String idioma;
@@ -16,12 +16,12 @@ public class Livro {
     @ManyToOne
     private Autor autor;
 
-    public Long getIdApi() {
-        return idApi;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdApi(Long idApi) {
-        this.idApi = idApi;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitulo() {
