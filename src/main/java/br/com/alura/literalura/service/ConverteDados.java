@@ -10,7 +10,7 @@ public class ConverteDados {
         try {
             return mapper.readValue(json, classe);
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao converter JSON", e);
+            throw new RuntimeException(e);
         }
     }
 }

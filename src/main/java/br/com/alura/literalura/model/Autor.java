@@ -18,6 +18,16 @@ public class Autor {
     @OneToMany(mappedBy = "autor")
     private List<Livro> livros = new ArrayList<>();
 
+    public Autor() {
+    }
+
+    public Autor(String nome, Integer anoNascimento, Integer anoFalecimento, List<Livro> livros) {
+        this.nome = nome;
+        this.anoNascimento = anoNascimento;
+        this.anoFalecimento = anoFalecimento;
+        this.livros = livros;
+    }
+
     public Long getId() {
         return id;
     }
@@ -56,5 +66,14 @@ public class Autor {
 
     public void setLivros(List<Livro> livros) {
         this.livros = livros;
+    }
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "nome='" + nome + '\'' +
+                ", nascimento=" + anoNascimento +
+                ", falecimento=" + anoFalecimento +
+                '}';
     }
 }
